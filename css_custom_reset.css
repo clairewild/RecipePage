@@ -1,0 +1,17 @@
+html, body, footer, header, nav, section, aside, figure, figcaption, img, h1, h2, ul, ol, li, a, p, form, label, input, textarea, select, option {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  
+  background: transparent;
+}
+
+/* HTML5 display-role reset for older browsers */
+footer, header, hgroup, nav, section, aside, figure, figcaption {
+  display: block;
+}

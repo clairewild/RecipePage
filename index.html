@@ -6,6 +6,8 @@
 		<!-- metadata -->
 		<meta name="description" content="Simple easy chili recipe chocolate chili con carne paleo healthy.">
 		<meta charset="utf-8">
+		<!-- css reset -->
+		<link rel="stylesheet" href="css_custom_reset.css" type="text/css">
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" href="style.css" type="text/css">
 		<!-- javascript -->
@@ -21,25 +23,25 @@
   	</script>
 	</head>
 
+	<header>
+		<h1>Chocolate Chili</h1>
+
+		<img src="https://p5.zdassets.com/hc/settings_assets/949671/200252358/ytySguzPxy92CMwTwD4fxg-logo-emblem-red.png" alt="app academy logo"/>
+
+		<nav>
+			<ul>
+				<li><a href="#description">Description</a></li>
+				<li><a href="#ingredients">Ingredients</a></li>
+				<li><a href="#instructions">Instructions</a></li>
+			</ul>
+		</nav>
+	</header>
+
 	<body>
-		<header>
-			<h2>Chocolate Chili</h2>
-
-			<img src="https://p5.zdassets.com/hc/settings_assets/949671/200252358/ytySguzPxy92CMwTwD4fxg-logo-emblem-red.png" alt="app academy logo"/>
-
-			<nav>
-				<ul>
-					<li><a href="#description">Description</a></li>
-					<li><a href="#ingredients">Ingredients</a></li>
-					<li><a href="#instructions">Instructions</a></li>
-				</ul>
-			</nav>
-		</header>
-
 		<aside>
 			<h2 id="ingredients">Ingredients</h2>
 
-			<ul>
+			<ul class="ingredients-list">
 				<li>2 tablespoons coconut oil</li>
 				<li>2 medium onions, diced (about 2 cups)</li>
 				<li>4 cloves garlic, minced (about 4 teaspoons)</li>
@@ -72,7 +74,7 @@
 		
 			<h2 id="instructions">Instructions</h2>
 
-			<ol>
+			<ol class="directions">
 				<li>
 					<p>Heat a large pot over medium heat, and add coconut oil.  Add the chopped onions and cook until they're translucent.  Add garlic and saute for about 30 seconds, then crumble in the ground meat, mixing with a spoon to combine. Cook the meat until it's no longer pink.  Don't forget salt!</p>
 				</li>
@@ -88,12 +90,13 @@
 		</section>
 
 		<section id="reviews">
+			<h2>Reviews</h2>
+
 			<form id="review-form" action="/reviews", method="post">
 				<label for="name">Name</label>
-				<input id="name type="text" name="name">
+				<input id="name" type="text" name="name">
 				<br>
 
-				<label for="rating">Rating</label>
 				<input id="rating" type="radio" value="1" name="rating" checked>
 				<input id="rating" type="radio" value="2" name="rating">
 				<input id="rating" type="radio" value="3" name="rating">
@@ -101,20 +104,19 @@
 				<input id="rating" type="radio" value="5" name="rating">
 				<br>
 
-				<label for="expertise">Cooking Expertise</label>
 				<select id="expertise" name="expertise">
 					<option disabled selected>-- Select Cooking Expertise --</option>
-					<option>Sometimes Cook</option>
-					<option>Cook Everyday</option>
-					<option>Cooking is a Hobby</option>
-					<option>Professional Chef</option>
+					<option value="Sometimes Cook">Sometimes Cook</option>
+					<option value="Cook Everyday">Cook Everyday</option>
+					<option value="Cooking is a Hobby">Cooking is a Hobby</option>
+					<option value="Professional Chef">Professional Chef</option>
 				</select>
 				<br>
 
 				<label>Review<textarea name="review"></textarea></label>
 				<br>
 
-				<input type="submit" name="submit">
+				<input type="submit" value="Submit">
 			</form>
 		</section>
 	</body>
